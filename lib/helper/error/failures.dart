@@ -1,3 +1,5 @@
+import 'dart:math';
+import 'dart:developer';
 import 'package:dio/dio.dart';
 
 abstract class Failure {
@@ -43,26 +45,29 @@ class ServerFailure extends Failure {
     if (response == null || response.statusCode == null) {
       return "There was an error. Please try again.";
     }
-
+    
     //here, you should build the model
     switch (response.statusCode) {
       case 400:
       return response.data['errors'][0];
        // return "طلب غير صالح. يرجى التحقق من المدخلات.";
       case 401:
-      return response.data['errors'][0];
-       // return "غير مصرح. اسم المستخدم أو كلمة المرور غير صحيحة.";
+      //return response.data['errors'][0];
+        return "غير مصرح. اسم المستخدم أو كلمة المرور غير صحيحة.";
       case 403:
      // return response.data['errors'][0].toString();
         return "طلب مرفوض.";
       case 404:
-      return response.data['errors'][0];
-       // return "المورد غير موجود.";
+      //return response.data['errors'][0];
+        return "المورد غير موجود.";
       case 500:
-      return response.data['errors'][0];
-       // return "خطأ داخلي في الخادم. يرجى المحاولة لاحقاً.";
+      //return response.data['errors'][0];
+       return "خطأ داخلي في الخادم. يرجى المحاولة لاحقاً.";
       default:
-      return response.data['errors'][0];
+      {
+       return "استجابة غير صحيحة برمز الحالة: ${response.statusCode}";
+      }
+      //return response.data['errors'][0];
        // return "استجابة غير صحيحة برمز الحالة: ${response.statusCode}";
     }
   }

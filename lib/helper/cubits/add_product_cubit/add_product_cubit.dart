@@ -9,11 +9,11 @@ class AddProductCubit extends Cubit <AddProductState>{
   emit(LoadingAddProductState());
  final result =await AddProductVM(Dio()).postProduct(productUploaderData:productUploaderData);
   result.fold((left) {
-      emit(AddProductErrorState(errorMessage: left.errorMessage));
-      print('left');
+      emit(AddProductErrorState(errorMessage:left.errorMessage));
+     // print('left');
     }, (right) {
        emit(DoneAddProductState());
-       print('right');
+      // print('right');
     });
  
  }

@@ -11,7 +11,7 @@ class ProductByBarcodeVM {
   final Dio dio;
   ProductByBarcodeVM(this.dio);
   String token =
-      'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmRhMTFoYSIsImlhdCI6MTc0NDE2NTc4OCwiZXhwIjoxNzQ0NzcwNTg4fQ.vTrovpjsv5zCu_wmIK_nAMH4exN3NxAXD1Q0f3fRWqg';
+      'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvbWVyIiwiaWF0IjoxNzQ0NTY5OTU2LCJleHAiOjE3NDUxNzQ3NTZ9.awcws0YmdTW71QWv_3PINfeVqRMPQmVuynIXS7MjVtA';
 
   Future<Either<Failure, ProductState>> get({required barcode}) async {
     try {
