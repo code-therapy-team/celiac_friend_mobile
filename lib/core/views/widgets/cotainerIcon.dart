@@ -24,7 +24,7 @@ class ContainerIcon extends StatelessWidget {
         borderRadius:BorderRadius.circular(3) ,
         color:backgroundIcon
       ) ,
-      child:  Image.asset(imagePath,height:16 ,width: 16,fit:BoxFit.fill ,),
+      child:  Image.asset(imagePath,height:imageH ,width: imageW,fit:BoxFit.fill ,),
     );
   }
 

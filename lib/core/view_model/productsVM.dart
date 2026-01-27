@@ -1,120 +1,69 @@
+import 'package:celus_fe/core/api/api_consumer.dart';
+import 'package:celus_fe/core/api/end_ponits.dart';
 import 'package:celus_fe/helper/error/failures.dart';
 import 'package:dartz/dartz.dart';
-import 'package:dio/dio.dart';
-import '../../helper/apiException.dart';
-import '../constants/api_urls.dart';
 import '../models/product.dart';
 
 class ProductsVM {
-  final Dio dio;
-  final ApiException apiException = ApiException();
-  ProductsVM(this.dio);
-  String token='eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvbWVyIiwiaWF0IjoxNzQ0NTY5OTU2LCJleHAiOjE3NDUxNzQ3NTZ9.awcws0YmdTW71QWv_3PINfeVqRMPQmVuynIXS7MjVtA';
-  
-  // GET request
-  Future<Either<Failure,List<Product>>> get() async {
+  final ApiConsumer apiConsumer;
+  ProductsVM({required this.apiConsumer});
+  Future<Either<Failure, List<Product>>> get({required int pageNumber}) async {
     try {
-      final response = await dio.get('${API_URL.allProductsUrl}',options: Options(
-          headers:{'Authorization': 'Bearer $token'} ,
-        ),
-      );
-      List productLst=response.data;
-     List<Product> products =productLst.map((item) => Product.fromJson(item)).toList();
+      // List<dynamic> response = await apiConsumer.get(EndPoint.product);
+      // final response = await apiConsumer.get(EndPoint.product,queryParameters: {'page':pageNumber});
+      final response = await apiConsumer.get('${EndPoint.product}?page=$pageNumber');
+      if (response.isEmpty) {
+        return Left(EmptyRemoteDataFailure('there is no products'));
+      }
+      List<Product> products = response
+          .map<Product>((item) => Product.fromJson(item))
+          .toList();
       return Right(products);
-    } catch(e){
+    } catch (e,stackTrace) {
       print(e);
+      print(stackTrace);
       return Left(ServerFailure.handleException(e));
     }
-   
   }
-
-  // POST request
-  Future<dynamic> post(String path,
-      {Object? data,
-      Map<String, dynamic>? queryParameters,
-      String? token}) async {
-    try {
-      final response = await dio.post(
-        path,
-        data: data,
-        queryParameters: queryParameters,
-        options: Options(
-          headers: token != null ? {'Authorization': 'Bearer $token'} : {},
-        ),
-      );
-      return response.data;
-    } on DioException catch (e) {
-      apiException.handleError(e);
-    } catch (e) {
-      throw Exception('$e');
-    }
-  }
-
-  // PUT request
-  Future<dynamic> put(String path,
-      {Object? data,
-      Map<String, dynamic>? queryParameters,
-      String? token}) async {
-    try {
-      final response = await dio.put(
-        path,
-        data: data,
-        queryParameters: queryParameters,
-        options: Options(
-          headers: token != null ? {'Authorization': 'Bearer $token'} : {},
-        ),
-      );
-      return response.data;
-    } on DioException catch (e) {
-     apiException.handleError(e);
-    } catch (e) {
-      throw Exception('$e');
-    }
-  }
-
-  // DELETE request
-  Future<dynamic> delete(String path,
-      {Object? data,
-      Map<String, dynamic>? queryParameters,
-      String? token}) async {
-    try {
-      final response = await dio.delete(
-        path,
-        data: data,
-        queryParameters: queryParameters,
-        options: Options(
-          headers: token != null ? {'Authorization': 'Bearer $token'} : {},
-        ),
-      );
-      return response.data;
-    } on DioException catch (e) {
-      apiException.handleError(e);
-    } catch (e) {
-      throw Exception('$e');
-    }
-  }
-
-  // PATCH request
-  Future<dynamic> patch(String path,
-      {Object? data,
-      Map<String, dynamic>? queryParameters,
-      String? token}) async {
-    try {
-      final response = await dio.patch(
-        path,
-        data: data,
-        queryParameters: queryParameters,
-        options: Options(
-          headers: token != null ? {'Authorization': 'Bearer $token'} : {},
-        ),
-      );
-      return response.data;
-    } on DioException catch (e) {
-     apiException.handleError(e);
-    } catch (e) {
-      throw Exception('$e');
-    }
-  }
-
- 
 }
+
+// import 'package:celus_fe/helper/error/exceptions.dart';
+// import 'package:celus_fe/helper/error/failures.dart';
+// import 'package:dartz/dartz.dart';
+// import 'package:dio/dio.dart';
+// import '../../helper/apiException.dart';
+// import '../models/product.dart';
+
+// class ProductsVM {
+//   final Dio dio;
+//   final ApiException apiException = ApiException();
+//   ProductsVM(this.dio);
+//   String token='eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvbWVyIiwiaWF0IjoxNzQ4MTE2MjAyLCJleHAiOjE3NDg3MjEwMDJ9.YXhZ-v39qEMAPIR5vJS4lOYtASQwKhjb6igGitjxkNI';
+  
+//   // GET request
+//   Future<Either<Failure,List<Product>>> get({required int pageNumber}) async {
+//     try {
+//       final response = await dio.get('http://152.53.32.75:8000/api/product?page=$pageNumber',options: Options(
+//           headers:{'Authorization': 'Bearer $token'} ,),);
+//        print(pageNumber);
+//       List productLst =response.data;
+//       if(productLst.isEmpty){
+//         throw ServerException('No More Data');
+//       }
+//   List<Product> products =productLst.map((item) => Product.fromJson(item)).toList();
+//    return Right(products);
+ 
+//     } catch(e){
+//       print('e = $e');
+//       return Left(ServerFailure.handleException(e));
+//     }
+   
+//   }
+// int checkUserProductVote({required Product product})
+// {
+  
+//    return 0;
+  
+// }
+//   // POST request
+// }

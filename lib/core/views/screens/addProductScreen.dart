@@ -3,13 +3,12 @@ import 'package:celus_fe/core/views/widgets/bigStack.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../constants/text_styles.dart';
-import '../../models/product.dart';
 import '../../models/productUploader.dart';
 import '../widgets/customContainerDialog.dart';
 import '../widgets/searchBox.dart';
 class AddProductScreen extends StatelessWidget {
    AddProductScreen({super.key,required this.barcode});
-  final String barcode;
+   final String barcode;
   @override
   final TextEditingController nameProductCt = TextEditingController();
   final TextEditingController brandProductCt = TextEditingController();

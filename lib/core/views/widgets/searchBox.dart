@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 class Box extends StatelessWidget {
-  Box({super.key, required this.hintText, required this.hintStyle,  this.suffixIcon, required this.color,this.onChanged,  this.controler});
-final String hintText;
-final TextStyle hintStyle;
+  const Box({super.key,  this.hintText,  this.hintStyle,  this.suffixIcon, required this.color,this.onChanged,  this.controler});
+final String? hintText;
+final TextStyle? hintStyle;
 final Widget? suffixIcon;
 final Color color;
 final void Function(String)? onChanged;

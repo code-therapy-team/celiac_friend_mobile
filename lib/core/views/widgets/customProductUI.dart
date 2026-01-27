@@ -1,6 +1,5 @@
 import 'package:celus_fe/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
-
 import '../../constants/text_styles.dart';
 import '../../models/product.dart';
 import 'columnNagitive.dart';
@@ -29,7 +28,7 @@ class _CustomProductUIState extends State<CustomProductUI> {
               child:GestureDetector(
                 child: ClipRRect(
                    borderRadius: BorderRadius.circular(16),
-                  child: widget.product.imageURL!=null? Image.network(widget.product.imageURL!.path,fit:BoxFit.fill):
+                  child: widget.product.imageURL!=null? Image.network(widget.product.imageURL!,fit:BoxFit.fill):
                    Image.asset('assets/images/image 1.png',fit:BoxFit.fill ,),
                 ),
                 onTap: (){  Navigator.pushNamed(context, "/productInfo",arguments:widget.product );},
@@ -56,16 +55,48 @@ class _CustomProductUIState extends State<CustomProductUI> {
                 style:AppTextStyle.greyBold8
                 ),
               SizedBox(height:7,),
-              Row(
+          if(widget.product.voteStatus==null)
+                Row(
                 children: [
                   IconWithValue(backgroundIcon:AppColors.lightGreen, imagePath: 'assets/images/ok.png', containerH:22, containerW:38,
-                   imageH:16 ,imageW: 16,value:widget.product.positiveVotes ,function:(context){dialog(context,ColumnPosative(product:widget.product,));} ,),
+                   imageH:16 ,imageW: 16,value:widget.product.positiveVotes ,function:(context){dialog(context,ColumnPosative(product:widget.product,));} ,
+                   borderColor:AppColors.lightGreen ,
+                   ),
                     SizedBox(width: 5,),
                      IconWithValue(backgroundIcon:AppColors.pinck, imagePath: 'assets/images/ok.png', containerH:22, containerW:38,
                   imageH:16 ,imageW: 16,value:widget.product.negativeVotes,function:(context){dialog(context,ColumnNagitive(product:widget.product ,));} ,
+                  borderColor:AppColors.pinck ,
                   ),
                 ],
-              ),
+                )
+          else if(widget.product.voteStatus =="SAFE")
+               Row(
+                children: [
+                  IconWithValue(backgroundIcon:AppColors.lightGreen, imagePath: 'assets/images/ok.png', containerH:22, containerW:38,
+                   imageH:18 ,imageW: 18,value:widget.product.positiveVotes ,function:(context){dialog(context,ColumnPosative(product:widget.product,));} ,
+                   borderColor:Colors.green ,
+                   ),
+                    SizedBox(width: 7,),
+                     IconWithValue(backgroundIcon:AppColors.pinck, imagePath: 'assets/images/ok.png', containerH:22, containerW:38,
+                  imageH:16 ,imageW: 16,value:widget.product.negativeVotes,function:(context){dialog(context,ColumnNagitive(product:widget.product ,));} ,
+                  borderColor:AppColors.pinck ,
+                  ),
+                ],
+                )
+          else if (widget.product.voteStatus=="UNSAFE")
+           Row(
+                children: [
+                  IconWithValue(backgroundIcon:AppColors.lightGreen, imagePath: 'assets/images/ok.png', containerH:22, containerW:38,
+                   imageH:16 ,imageW: 16,value:widget.product.positiveVotes ,function:(context){dialog(context,ColumnPosative(product:widget.product,));} ,
+                   borderColor:AppColors.lightGreen ,
+                   ),
+                    SizedBox(width: 7,),
+                     IconWithValue(backgroundIcon:AppColors.pinck, imagePath: 'assets/images/ok.png', containerH:22, containerW:38,
+                  imageH:18 ,imageW: 18,value:widget.product.negativeVotes,function:(context){dialog(context,ColumnNagitive(product:widget.product ,));} ,
+                  borderColor:Colors.pink ,
+                  ),
+                ],
+                )
              
             ]),
 

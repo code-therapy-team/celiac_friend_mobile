@@ -1,8 +1,8 @@
 class ProductState{
-  String productName;
+  String? productName;
   String productSafetyStatus;
   int contributionCount;
-  String imageURL;
+  String? imageURL;
 
   ProductState({required this.contributionCount,required this.productSafetyStatus,required this.imageURL,
   required this.productName

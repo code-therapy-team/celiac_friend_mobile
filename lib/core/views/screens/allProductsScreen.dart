@@ -5,11 +5,13 @@ import 'package:celus_fe/helper/cubits/search_product_cubit/search_product_cubit
 import 'package:celus_fe/helper/cubits/search_product_cubit/search_product_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../helper/cubits/get_product_cubit/get_product_state.dart';
 import '../../constants/text_styles.dart';
 import '../widgets/ProductListviewBlocBuilder.dart';
 import '../widgets/customSearch.dart';
 import '../widgets/infoBar.dart';
 import '../widgets/searchEmptWidget.dart';
+import '../widgets/widgetLoadingPagination.dart';
 class AllProductsScreen extends StatelessWidget {
    AllProductsScreen({super.key});
   @override
@@ -24,7 +26,23 @@ class AllProductsScreen extends StatelessWidget {
           )
       ],
       child: Scaffold(
-        body: AllProductScreenBody()
+        body: AllProductScreenBody(),
+        bottomNavigationBar:BlocBuilder<ProductCubit,ProductState>(
+              buildWhen: (previous, current) => current is GetProductFromPaginationLoading ||current is ProductLoadedState || current is ProductErrorState || current is ProductErrorPaginationState || current is ProductInitialState,
+          builder:(context,state){
+          if(state is GetProductFromPaginationLoading)
+          {
+            return WidgetLoadingPagination();
+          }else if(state is ProductErrorPaginationState){
+            return SafeArea(child: SizedBox(
+            height: 60,
+            child: Center(child:Text(state.errorMessage)),
+          ),);
+          }
+          else{
+            return SizedBox.shrink();
+          }
+        })
       ),
     );
   }

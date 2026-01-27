@@ -1,19 +1,14 @@
-import 'package:celus_fe/core/view_model/addProductVM.dart';
-import 'package:dio/dio.dart';
+import 'package:celus_fe/core/services/init_services.dart';
+import 'package:celus_fe/core/views/screens/signUpScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'core/view_model/searchByName.dart';
-import 'core/view_model/votingVM.dart';
 import 'helper/appRoute.dart';
 
-void main()async {
- await AddProductVM(Dio()).postProduct(productUploaderData:{'productName':' شوكلاته', 'brandName':' جالكسي',
-  ' manufacturerCountry':' السعودية' , 'barcode': '6294001816942', 
-  'productImage':'assets/images/image 1.png',' ingredientsImage': 'assets/images/image 1.png'});
+void main() async{
+ await InitServices.init();
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
-  
   const MyApp({super.key});
 
   @override
@@ -29,7 +24,7 @@ class MyApp extends StatelessWidget {
           Locale('ar'),
         ],
         debugShowCheckedModeBanner: false,
-     // home:AllProductsScreen() ,
+    //home:SignUpScreen(),
       initialRoute: '/allProductionScreen',
       onGenerateRoute: RouteManager.generateRoute,
     );
