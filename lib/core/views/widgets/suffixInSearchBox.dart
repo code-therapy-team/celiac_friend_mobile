@@ -20,7 +20,9 @@ class SuffixInSearchBox extends StatelessWidget {
             child:GestureDetector(
               child: SvgPicture.asset('assets/images/noun-barcode-scanner-74445.svg' ,height: 30,width: 25,
               color:AppColors.meduimGrey ,),
-              onTap:(){Navigator.pushNamed(context,'/scanBarcodeOne');} ,
+              onTap:(){
+                Navigator.pushNamed(context, '/scanBarcodeOne');
+              } ,
             )
             ),
            ],),

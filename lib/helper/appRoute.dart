@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../core/models/productUploader.dart';
 import '../core/views/screens/addProductScreen.dart';
 import '../core/views/screens/allProductsScreen.dart';
-import '../core/views/widgets/doneAddProduc.dart';
 import '../core/views/screens/productInfo.dart';
 import '../core/views/screens/addProductImageBuilder.dart';
 
@@ -20,7 +19,7 @@ class RouteManager {
         return MaterialPageRoute(builder: (ctx) => ScanBarcodeOne());
       case '/addProductScreen':
       String barcode = settings.arguments as String;
-        return MaterialPageRoute(builder: (ctx) => AddProductScreen(barcode: barcode,),settings: settings);
+        return MaterialPageRoute(builder: (ctx) => AddProductScreen(barcode:barcode),settings:settings);
       case '/addProductImage':
        ProductUploader productUploader = settings.arguments as ProductUploader;
         return MaterialPageRoute(builder: (ctx) => AddProductImageBuilder(productUploader:productUploader,),settings:settings);

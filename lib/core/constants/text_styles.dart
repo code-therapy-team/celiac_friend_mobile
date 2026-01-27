@@ -110,6 +110,37 @@ abstract class AppTextStyle {
               fontFamily: 'Samim',
               fontWeight: FontWeight.w700,
               );
+ static const TextStyle darkGreen10 =TextStyle(
+              color: AppColors.darkGreen,
+              fontSize: 10,
+              fontFamily: 'Samim',
+              fontWeight: FontWeight.w700,
+              );
+ static const TextStyle darkPinck10 =TextStyle(
+              color: AppColors.darckPinck,
+              fontSize: 10,
+              fontFamily: 'Samim',
+              fontWeight: FontWeight.w700,
+              );
+  static const TextStyle CairoRegular24 =TextStyle(
+              color: Colors.black,
+              fontSize: 24,
+              fontFamily: 'Cairo',
+              fontWeight: FontWeight.w400,
+              );
+  static  TextStyle CairoSemiBold18 =TextStyle(
+              color: AppColors.darkGrey,
+              fontSize: 18,
+              fontFamily: 'Cairo',
+              fontWeight: FontWeight.w600,
+              );
+  static  TextStyle CairoSemiBold12 =TextStyle(
+              color: AppColors.darkGreyWithOp8,
+              fontSize: 12,
+              fontFamily: 'Cairo',
+              fontWeight: FontWeight.w600,
+              );
+
 
 
 }

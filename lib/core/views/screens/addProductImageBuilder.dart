@@ -20,33 +20,24 @@ final ProductUploader productUploader;
         padding: EdgeInsets.only(right: 30, left: 30, top: 25),
         child: BlocProvider(
           create: (context) => AddProductCubit(),
-          child: AddProductImageBlocBuilder(productUploader: productUploader,)
-        ),
-      ),
-    ),
-  ); 
-        
-  }
-  
-}
-class AddProductImageBlocBuilder extends StatelessWidget {
-  const AddProductImageBlocBuilder({super.key,required this.productUploader});
-final ProductUploader productUploader;
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<AddProductCubit, AddProductState>(
+          child: BlocBuilder<AddProductCubit, AddProductState>(
             builder: (context, state) {
               if (state is InitailAddProductState) {
                 return AddProductImage(productUploader: productUploader);
               } else if (state is DoneAddProductState) {
-                return DoneAddProduct();
+                return DoneAddProduct(name:state.name ,);
               } else if (state is AddProductErrorState) {
                 return Center(child: Text(state.errorMessage));
               } else {
                 return Center(child: CircularProgressIndicator());
               }
             },
-          );
+          ),
+        ),
+      ),
+    ),
+  );
+       
+        
   }
 }

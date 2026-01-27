@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+
 import '../../constants/app_colors.dart';
 import '../../constants/text_styles.dart';
 import 'customContainerDialog.dart';
@@ -30,7 +31,7 @@ class SearchEmptyWidget extends StatelessWidget {
           GestureDetector(child: const Center(
             child:CustomContainerDialog(height:29 ,width:150,text:'اسأل عن هذا المنتج' ,
             color: AppColors.notFoundGrey,textStyle:AppTextStyle.bold12_white) ,),
-          onTap:(){Navigator.pushNamed(context, "/addProductScreen",arguments:'5290050512163'  );} ,
+          onTap:(){Navigator.pushNamed(context,"/scanBarcodeOne", );} ,
          
             )
     ],);

@@ -1,5 +1,4 @@
-import 'dart:math';
-import 'dart:developer';
+import 'package:celus_fe/helper/error/exceptions.dart';
 import 'package:dio/dio.dart';
 
 abstract class Failure {
@@ -14,9 +13,17 @@ class ServerFailure extends Failure {
     if (e is DioException) {
       final errorMessage = _mapDioErrorToMessage(e);
       return ServerFailure(errorMessage);
-    } else {
+    }else if(e is ServerException){
+        return ServerFailure(e.errorMessage);
+    }
+     else {
       return ServerFailure(
-          "حدث خطأ غير معروف. يرجى المحاولة مرة أخرى لاحقًا.");
+          """
+$e
+
+حدث خطأ غير معروف. يرجى المحاولة مرة أخرى لاحقًا.
+          
+          """);
     }
   }
 
@@ -45,30 +52,24 @@ class ServerFailure extends Failure {
     if (response == null || response.statusCode == null) {
       return "There was an error. Please try again.";
     }
-    
     //here, you should build the model
     switch (response.statusCode) {
       case 400:
-      return response.data['errors'][0];
-       // return "طلب غير صالح. يرجى التحقق من المدخلات.";
+        return "طلب غير صالح. يرجى التحقق من المدخلات.";
       case 401:
-      //return response.data['errors'][0];
         return "غير مصرح. اسم المستخدم أو كلمة المرور غير صحيحة.";
       case 403:
-     // return response.data['errors'][0].toString();
         return "طلب مرفوض.";
       case 404:
-      //return response.data['errors'][0];
         return "المورد غير موجود.";
       case 500:
-      //return response.data['errors'][0];
-       return "خطأ داخلي في الخادم. يرجى المحاولة لاحقاً.";
+        return "خطأ داخلي في الخادم. يرجى المحاولة لاحقاً.";
       default:
-      {
-       return "استجابة غير صحيحة برمز الحالة: ${response.statusCode}";
-      }
-      //return response.data['errors'][0];
-       // return "استجابة غير صحيحة برمز الحالة: ${response.statusCode}";
+        return "استجابة غير صحيحة برمز الحالة: ${response.statusCode}";
     }
   }
+}
+
+class EmptyRemoteDataFailure extends Failure {
+  EmptyRemoteDataFailure(super.errorMessage);
 }
