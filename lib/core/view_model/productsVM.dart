@@ -1,6 +1,6 @@
-import 'package:celus_fe/core/api/api_consumer.dart';
-import 'package:celus_fe/core/api/end_ponits.dart';
-import 'package:celus_fe/helper/error/failures.dart';
+import 'package:celiac_mobile/core/api/api_consumer.dart';
+import 'package:celiac_mobile/core/api/end_ponits.dart';
+import 'package:celiac_mobile/helper/error/failures.dart';
 import 'package:dartz/dartz.dart';
 import '../models/product.dart';
 
@@ -27,8 +27,8 @@ class ProductsVM {
   }
 }
 
-// import 'package:celus_fe/helper/error/exceptions.dart';
-// import 'package:celus_fe/helper/error/failures.dart';
+// import 'package:celiac_mobile/helper/error/exceptions.dart';
+// import 'package:celiac_mobile/helper/error/failures.dart';
 // import 'package:dartz/dartz.dart';
 // import 'package:dio/dio.dart';
 // import '../../helper/apiException.dart';

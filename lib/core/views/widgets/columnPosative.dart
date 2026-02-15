@@ -1,7 +1,7 @@
-import 'package:celus_fe/core/api/dio_consumer.dart';
-import 'package:celus_fe/core/constants/text_styles.dart';
-import 'package:celus_fe/core/models/product.dart';
-import 'package:celus_fe/core/services/get_it.dart';
+import 'package:celiac_mobile/core/api/dio_consumer.dart';
+import 'package:celiac_mobile/core/constants/text_styles.dart';
+import 'package:celiac_mobile/core/models/product.dart';
+import 'package:celiac_mobile/core/services/get_it.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -56,9 +56,9 @@ class _ColumnPosativeState extends State<ColumnPosative> {
                   
                 });
                  if (widget.product.voteStatus==null || widget.product.voteStatus=="UNSAFE") {
-                 await VotingVM(apiConsumer: getIt<DioConsumer>(),).postVote(productBarcode:int.parse(widget.product.barcode!) , voteData:voteData.positiveVote);
+                 await VotingVM(apiConsumer: getIt<DioConsumer>(),).postVote(productBarcode:int.parse(widget.product.barcode) , voteData:voteData.positiveVote);
                 }else if(widget.product.voteStatus=="SAFE"){
-                 await VotingVM(apiConsumer: getIt<DioConsumer>(),).postVote(productBarcode:int.parse(widget.product.barcode!) , voteData:voteData.deleteVote);
+                 await VotingVM(apiConsumer: getIt<DioConsumer>(),).postVote(productBarcode:int.parse(widget.product.barcode) , voteData:voteData.deleteVote);
                 }
                 isLoading=false;
                 setState(() {
@@ -74,9 +74,9 @@ class _ColumnPosativeState extends State<ColumnPosative> {
                   
                 });
                  if (widget.product.voteStatus==null || widget.product.voteStatus=="UNSAFE") {
-                 await VotingVM(apiConsumer: getIt<DioConsumer>(),).postVote(productBarcode:int.parse(widget.product.barcode!) , voteData:voteData.positiveVote);
+                 await VotingVM(apiConsumer: getIt<DioConsumer>(),).postVote(productBarcode:int.parse(widget.product.barcode) , voteData:voteData.positiveVote);
                 }else if(widget.product.voteStatus=="SAFE"){
-                 await VotingVM(apiConsumer: getIt<DioConsumer>(),).postVote(productBarcode:int.parse(widget.product.barcode!) , voteData:voteData.deleteVote);
+                 await VotingVM(apiConsumer: getIt<DioConsumer>(),).postVote(productBarcode:int.parse(widget.product.barcode) , voteData:voteData.deleteVote);
                 }
                 isLoading =false;
                 setState(() {
@@ -100,10 +100,10 @@ class _ColumnPosativeState extends State<ColumnPosative> {
       }, );
   }
 }
-// import 'package:celus_fe/core/api/dio_consumer.dart';
-// import 'package:celus_fe/core/constants/text_styles.dart';
-// import 'package:celus_fe/core/models/product.dart';
-// import 'package:celus_fe/core/services/get_it.dart';
+// import 'package:celiac_mobile/core/api/dio_consumer.dart';
+// import 'package:celiac_mobile/core/constants/text_styles.dart';
+// import 'package:celiac_mobile/core/models/product.dart';
+// import 'package:celiac_mobile/core/services/get_it.dart';
 // import 'package:dio/dio.dart';
 // import 'package:flutter/material.dart';
 // import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';

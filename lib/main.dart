@@ -1,5 +1,5 @@
-import 'package:celus_fe/core/services/init_services.dart';
-import 'package:celus_fe/core/views/screens/signUpScreen.dart';
+import 'package:celiac_mobile/core/services/init_services.dart';
+import 'package:celiac_mobile/core/views/screens/signUpScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'helper/appRoute.dart';
@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
           Locale('ar'),
         ],
         debugShowCheckedModeBanner: false,
-    //home:SignUpScreen(),
-      initialRoute: '/allProductionScreen',
+        home:SignUpScreen(),
+     // initialRoute: '/allProductionScreen',
       onGenerateRoute: RouteManager.generateRoute,
     );
   }

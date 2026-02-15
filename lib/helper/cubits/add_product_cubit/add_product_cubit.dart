@@ -1,5 +1,5 @@
-import 'package:celus_fe/core/api/dio_consumer.dart';
-import 'package:celus_fe/core/services/get_it.dart';
+import 'package:celiac_mobile/core/api/dio_consumer.dart';
+import 'package:celiac_mobile/core/services/get_it.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/view_model/addProductVM.dart';
 import 'add_product_state.dart';

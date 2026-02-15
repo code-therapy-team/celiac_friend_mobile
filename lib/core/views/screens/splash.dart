@@ -1,4 +1,4 @@
-import 'package:celus_fe/core/views/screens/onBoardingScreen.dart';
+import 'package:celiac_mobile/core/views/screens/onBoardingScreen.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -33,9 +33,9 @@ class _SplashState extends State<Splash> {
                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                 SizedBox(
-                  child: Image.asset('assets/images/Logo.png'),
                   height:116 ,
                   width:116 ,
+                  child: Image.asset('assets/images/Logo.png'),
                   ),
                 SizedBox(height:20 ,),
                 Text('Celiac Friend',style: TextStyle(

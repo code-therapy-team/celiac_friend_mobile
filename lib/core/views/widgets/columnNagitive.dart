@@ -1,8 +1,8 @@
-import 'package:celus_fe/core/api/dio_consumer.dart';
-import 'package:celus_fe/core/models/choise.dart';
-import 'package:celus_fe/core/models/product.dart';
-import 'package:celus_fe/core/services/get_it.dart';
-import 'package:celus_fe/core/view_model/reasonsVM.dart';
+import 'package:celiac_mobile/core/api/dio_consumer.dart';
+import 'package:celiac_mobile/core/models/choise.dart';
+import 'package:celiac_mobile/core/models/product.dart';
+import 'package:celiac_mobile/core/services/get_it.dart';
+import 'package:celiac_mobile/core/view_model/reasonsVM.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -26,6 +26,7 @@ class _ColumnNagitiveState extends State<ColumnNagitive> {
    bool isLoading =false;
     VoteData voteData=VoteData();
   var future;
+  @override
   void initState() {
     super.initState();
     future = ReasonsVM(apiConsumer: getIt<DioConsumer>(),).get();
@@ -97,11 +98,11 @@ class _ColumnNagitiveState extends State<ColumnNagitive> {
   }
 }
  
-// import 'package:celus_fe/core/api/dio_consumer.dart';
-// import 'package:celus_fe/core/models/choise.dart';
-// import 'package:celus_fe/core/models/product.dart';
-// import 'package:celus_fe/core/services/get_it.dart';
-// import 'package:celus_fe/core/view_model/reasonsVM.dart';
+// import 'package:celiac_mobile/core/api/dio_consumer.dart';
+// import 'package:celiac_mobile/core/models/choise.dart';
+// import 'package:celiac_mobile/core/models/product.dart';
+// import 'package:celiac_mobile/core/services/get_it.dart';
+// import 'package:celiac_mobile/core/view_model/reasonsVM.dart';
 // import 'package:dio/dio.dart';
 // import 'package:flutter/material.dart';
 // import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';

@@ -1,6 +1,6 @@
-import 'package:celus_fe/core/api/api_consumer.dart';
-import 'package:celus_fe/core/api/end_ponits.dart';
-import 'package:celus_fe/core/models/choise.dart';
+import 'package:celiac_mobile/core/api/api_consumer.dart';
+import 'package:celiac_mobile/core/api/end_ponits.dart';
+import 'package:celiac_mobile/core/models/choise.dart';
 
 class ReasonsVM{
   final ApiConsumer apiConsumer;
@@ -12,8 +12,8 @@ class ReasonsVM{
   }
 }
 
-// import 'package:celus_fe/core/constants/api_urls.dart';
-// import 'package:celus_fe/core/models/choise.dart';
+// import 'package:celiac_mobile/core/constants/api_urls.dart';
+// import 'package:celiac_mobile/core/models/choise.dart';
 // import 'package:dio/dio.dart';
 
 // import '../../helper/apiException.dart';

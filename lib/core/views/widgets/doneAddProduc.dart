@@ -1,6 +1,6 @@
 
-import 'package:celus_fe/core/api/dio_consumer.dart';
-import 'package:celus_fe/core/services/get_it.dart';
+import 'package:celiac_mobile/core/api/dio_consumer.dart';
+import 'package:celiac_mobile/core/services/get_it.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -30,6 +30,7 @@ class _DoneAddProductState extends State<DoneAddProduct> {
    return product;
     });
   }
+  @override
   void initState() {
     
     super.initState();
@@ -45,7 +46,7 @@ class _DoneAddProductState extends State<DoneAddProduct> {
         ),
         SizedBox(height: 30),
         Center(
-          child: Container(
+          child: SizedBox(
             height: 100,
             width: 100,
             child: ClipRRect(

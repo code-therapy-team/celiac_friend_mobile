@@ -1,8 +1,8 @@
-import 'package:celus_fe/core/constants/app_colors.dart';
-import 'package:celus_fe/core/constants/text_styles.dart';
-import 'package:celus_fe/core/views/widgets/searchBox.dart';
-import 'package:celus_fe/core/views/widgets/suffixInSearchBox.dart';
-import 'package:celus_fe/helper/cubits/search_product_cubit/search_product_cubit.dart';
+import 'package:celiac_mobile/core/constants/app_colors.dart';
+import 'package:celiac_mobile/core/constants/text_styles.dart';
+import 'package:celiac_mobile/core/views/widgets/searchBox.dart';
+import 'package:celiac_mobile/core/views/widgets/suffixInSearchBox.dart';
+import 'package:celiac_mobile/helper/cubits/search_product_cubit/search_product_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,6 +27,7 @@ class _CustomSearchState extends State<CustomSearch> {
    debouncer.cancel();
     super.dispose();
   }
+  @override
   Widget build(BuildContext context) {
     return Box(
       color:AppColors.lightGrey, 

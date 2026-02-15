@@ -1,4 +1,4 @@
-import 'package:celus_fe/core/views/widgets/verticalLine.dart';
+import 'package:celiac_mobile/core/views/widgets/verticalLine.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

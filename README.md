@@ -1,4 +1,4 @@
-# celus_fe
+# celiac_mobile
 
 A new Flutter project.
 

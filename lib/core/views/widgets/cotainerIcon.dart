@@ -1,10 +1,10 @@
-import 'package:celus_fe/core/constants/app_colors.dart';
+import 'package:celiac_mobile/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import 'customContainerDialog.dart';
 
 class ContainerIcon extends StatelessWidget {
-   ContainerIcon({super.key,required this.imagePath,required this.backgroundIcon,this.value,required this.containerH,
+   const ContainerIcon({super.key,required this.imagePath,required this.backgroundIcon,this.value,required this.containerH,
   required this.containerW,required this.imageH,required this.imageW
   });
  final String imagePath;

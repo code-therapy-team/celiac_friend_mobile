@@ -1,15 +1,12 @@
-import 'package:celus_fe/core/api/dio_consumer.dart';
-import 'package:celus_fe/core/models/productState.dart';
-import 'package:celus_fe/core/services/get_it.dart';
-import 'package:celus_fe/helper/error/failures.dart';
-import 'package:dartz/dartz.dart' as dartz;
+import 'package:celiac_mobile/core/api/dio_consumer.dart';
+import 'package:celiac_mobile/core/services/get_it.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/text_styles.dart';
 import '../../models/product.dart';
-import '../../view_model/ProductByBarcodeVM.dart';
+import '../../view_model/productByBarcodeVM.dart';
 import '../widgets/bigStack.dart';
 import '../widgets/customContainerDialog.dart';
 
@@ -52,7 +49,7 @@ class _ScanBarcodeOneState extends State<ScanBarcodeOne> {
                   child: SvgPicture.asset(
                     'assets/images/noun-barcode-scanner-74445.svg',
                     fit: BoxFit.fill,
-                    color: Colors.black,
+                    colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
                   ),
                 ),
               ),

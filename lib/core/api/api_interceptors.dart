@@ -1,7 +1,7 @@
-import 'package:celus_fe/core/api/end_ponits.dart';
-import 'package:celus_fe/core/models/login_model.dart';
-import 'package:celus_fe/helper/login_operation.dart';
-import 'package:celus_fe/helper/token_operation.dart';
+import 'package:celiac_mobile/core/api/end_ponits.dart';
+import 'package:celiac_mobile/core/models/login_model.dart';
+import 'package:celiac_mobile/helper/login_operation.dart';
+import 'package:celiac_mobile/helper/token_operation.dart';
 import 'package:dio/dio.dart';
 
 class ApiInterceptor extends Interceptor {

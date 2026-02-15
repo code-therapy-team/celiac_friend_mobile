@@ -1,4 +1,4 @@
-import 'package:celus_fe/core/services/shared_pref.dart';
+import 'package:celiac_mobile/core/services/shared_pref.dart';
 
 class TokenStorage {
   static const String _accessTokenKey = 'access_token_key';

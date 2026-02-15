@@ -1,6 +1,6 @@
-import 'package:celus_fe/core/views/widgets/containerSignIn.dart';
-import 'package:celus_fe/core/views/widgets/password_section.dart';
-import 'package:celus_fe/core/views/widgets/user_section.dart';
+import 'package:celiac_mobile/core/views/widgets/containerSignIn.dart';
+import 'package:celiac_mobile/core/views/widgets/password_section.dart';
+import 'package:celiac_mobile/core/views/widgets/user_section.dart';
 import 'package:flutter/material.dart';
 import '../../constants/text_styles.dart';
 

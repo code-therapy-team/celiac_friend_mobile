@@ -1,6 +1,6 @@
-import 'package:celus_fe/core/constants/app_colors.dart';
-import 'package:celus_fe/core/constants/text_styles.dart';
-import 'package:celus_fe/core/views/widgets/verticalLine.dart';
+import 'package:celiac_mobile/core/constants/app_colors.dart';
+import 'package:celiac_mobile/core/constants/text_styles.dart';
+import 'package:celiac_mobile/core/views/widgets/verticalLine.dart';
 import 'package:flutter/material.dart';
 
 import 'cotainerIcon.dart';

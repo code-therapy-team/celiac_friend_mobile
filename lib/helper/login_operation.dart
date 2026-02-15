@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:celus_fe/core/models/login_model.dart';
-import 'package:celus_fe/core/services/shared_pref.dart';
+import 'package:celiac_mobile/core/models/login_model.dart';
+import 'package:celiac_mobile/core/services/shared_pref.dart';
 
 
 class LoginOperation {

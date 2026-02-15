@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:celus_fe/helper/image_compress.dart';
+import 'package:celiac_mobile/helper/image_compress.dart';
 import 'package:dio/dio.dart';
 import 'package:image_picker/image_picker.dart';
 

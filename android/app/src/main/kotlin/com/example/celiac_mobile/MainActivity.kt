@@ -1,4 +1,4 @@
-package com.example.celus_fe
+package com.example.celiac_mobile
 
 import io.flutter.embedding.android.FlutterActivity
 

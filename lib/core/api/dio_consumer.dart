@@ -1,6 +1,6 @@
-import 'package:celus_fe/core/api/api_consumer.dart';
-import 'package:celus_fe/core/api/api_interceptors.dart';
-import 'package:celus_fe/core/api/end_ponits.dart';
+import 'package:celiac_mobile/core/api/api_consumer.dart';
+import 'package:celiac_mobile/core/api/api_interceptors.dart';
+import 'package:celiac_mobile/core/api/end_ponits.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';

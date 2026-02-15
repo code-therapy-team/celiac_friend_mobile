@@ -1,8 +1,8 @@
-import 'package:celus_fe/core/views/widgets/bigStack.dart';
-import 'package:celus_fe/core/views/widgets/productListViewBuilder.dart';
-import 'package:celus_fe/helper/cubits/get_product_cubit/get_product_cubit.dart';
-import 'package:celus_fe/helper/cubits/search_product_cubit/search_product_cubit.dart';
-import 'package:celus_fe/helper/cubits/search_product_cubit/search_product_states.dart';
+import 'package:celiac_mobile/core/views/widgets/bigStack.dart';
+import 'package:celiac_mobile/core/views/widgets/productListViewBuilder.dart';
+import 'package:celiac_mobile/helper/cubits/get_product_cubit/get_product_cubit.dart';
+import 'package:celiac_mobile/helper/cubits/search_product_cubit/search_product_cubit.dart';
+import 'package:celiac_mobile/helper/cubits/search_product_cubit/search_product_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../helper/cubits/get_product_cubit/get_product_state.dart';
@@ -13,7 +13,7 @@ import '../widgets/infoBar.dart';
 import '../widgets/searchEmptWidget.dart';
 import '../widgets/widgetLoadingPagination.dart';
 class AllProductsScreen extends StatelessWidget {
-   AllProductsScreen({super.key});
+   const AllProductsScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(

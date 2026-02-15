@@ -1,4 +1,4 @@
-import 'package:celus_fe/core/constants/text_styles.dart';
+import 'package:celiac_mobile/core/constants/text_styles.dart';
 import 'package:flutter/widgets.dart';
 import '../../constants/app_colors.dart';
 
@@ -16,11 +16,11 @@ final String text2;
         Container(
           width:144 ,
           height: 144,
-          child:widet ,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(72),
           color: AppColors.circularShape
           ),
+          child:widet ,
         ),
         SizedBox(height:20 ,),
         Text(text1,style:AppTextStyle.bold16_black ,),

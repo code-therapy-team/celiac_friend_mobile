@@ -1,4 +1,4 @@
-import 'package:celus_fe/core/models/product.dart';
+import 'package:celiac_mobile/core/models/product.dart';
 
 sealed class SearchProductState {}
 class SearchInitialState extends SearchProductState {}
