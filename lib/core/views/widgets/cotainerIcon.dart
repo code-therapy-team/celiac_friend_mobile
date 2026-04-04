@@ -1,7 +1,11 @@
+<<<<<<< Updated upstream
 import 'package:celus_fe/core/constants/app_colors.dart';
+=======
+
+>>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 
-import 'customContainerDialog.dart';
+
 
 class ContainerIcon extends StatelessWidget {
    ContainerIcon({super.key,required this.imagePath,required this.backgroundIcon,this.value,required this.containerH,
@@ -24,7 +28,7 @@ class ContainerIcon extends StatelessWidget {
         borderRadius:BorderRadius.circular(3) ,
         color:backgroundIcon
       ) ,
-      child:  Image.asset(imagePath,height:16 ,width: 16,fit:BoxFit.fill ,),
+      child:  Image.asset(imagePath,height:imageH ,width: imageW,fit:BoxFit.fill ,),
     );
   }
 

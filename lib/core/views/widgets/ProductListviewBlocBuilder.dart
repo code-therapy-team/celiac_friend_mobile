@@ -9,18 +9,21 @@ class ProductListViewBlocBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ProductCubit,ProductState>(
+       buildWhen: (previous, current) =>  current is! GetProductFromPaginationLoading && current is! ProductInitialState,
       builder:(context,state){
        if(state is ProductLoadedState) {
          return ProductListViewBuilder(products:state.products);
        } else if (state is ProductEmptyState) {
          return Center(child:  Text(state.message),);
-       } else if (state is ProductErrorState)
-      {
+       } else if (state is ProductErrorState){
          return Center(child:Text(state.errorMessage) ,);
       }
-      else
+      else if( state is ProductLoadingState)
       {
         return Center(child:CircularProgressIndicator(),);
+      }
+       else {
+        return Text('error');
       }
       },
   

@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class IconWithValue extends StatelessWidget {
    IconWithValue({super.key,required this.imagePath,required this.backgroundIcon,this.value,required this.containerH,
-  required this.containerW,required this.imageH,required this.imageW,required this.function
+  required this.containerW,required this.imageH,required this.imageW,required this.function,
+  required this.borderColor
   });
  final String imagePath;
  final Color backgroundIcon;
+ final Color borderColor;
  final int? value;
  final double containerH;
  final double containerW;
@@ -15,16 +17,15 @@ class IconWithValue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:(){function(context);}
-        
-       ,
+      onTap:(){function(context);},
       child: Container(
         height:containerH ,
         width:containerW,
         decoration:BoxDecoration(
           borderRadius:BorderRadius.circular(3) ,
-          color:backgroundIcon
-        ) ,
+          color:backgroundIcon,
+         border:Border.all(color:borderColor)
+          ),
         child:Row(mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(imagePath,height:16 ,width: 16,fit:BoxFit.fill ,),

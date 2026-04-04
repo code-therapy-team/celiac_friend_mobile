@@ -7,9 +7,12 @@ class Product {
   String barcode;
   int positiveVotes;
   int negativeVotes;
-  XFile? imageURL;
-  XFile? imageIngredientsURL;
+  String? imageURL;
+  String? imageIngredientsURL;
+  // XFile? imageURL;
+  // XFile? imageIngredientsURL;
   int? alternatives;
+  String? voteStatus;
   
 
   Product(
@@ -21,6 +24,7 @@ class Product {
       this.imageURL,
       this.imageIngredientsURL,
       this.alternatives,
+      this.voteStatus
       });
 
  factory Product.fromJson(Map<String, dynamic> json) {
@@ -30,9 +34,12 @@ class Product {
     barcode: json['barcode'],
     positiveVotes: json['positiveVotes'],
     negativeVotes:  json['negativeVotes'],
-    imageURL:XFile(json['imageURL']), 
-    imageIngredientsURL: json['imageIngredientsURL'] != null ? XFile(json['imageIngredientsURL']) : null,
+     imageURL:json['imageURL'], 
+    imageIngredientsURL: json['imageIngredientsURL'] ,
+    // imageURL:XFile(json['imageURL']), 
+    // imageIngredientsURL: json['imageIngredientsURL'] != null ? XFile(json['imageIngredientsURL']) : null,
     alternatives: json['alternatives'],
+    voteStatus:json ['voteStatus']
     );
     
   }
@@ -44,10 +51,14 @@ class Product {
     data['barcode'] = this.barcode;
     data['positiveVotes'] = this.positiveVotes;
     data['negativeVotes'] = this.negativeVotes;
-    data['imageURL'] = await MultipartFile.fromFile(imageURL!.path);
-    if(imageIngredientsURL !=null)
-    data['imageIngredientsURL'] = await MultipartFile.fromFile(imageIngredientsURL!.path);
+    data['voteStatus']=this.voteStatus;
+    data['imageURL'] = this.imageURL;
+    data['imageIngredientsURL'] =this. imageIngredientsURL;
+    // data['imageURL'] = await MultipartFile.fromFile(imageURL!.path);
+    // if(imageIngredientsURL !=null)
+    // data['imageIngredientsURL'] = await MultipartFile.fromFile(imageIngredientsURL!.path);
     data['alternatives'] = this.alternatives;
+   
     return data;
   }
 }
