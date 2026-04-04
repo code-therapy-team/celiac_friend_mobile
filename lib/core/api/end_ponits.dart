@@ -6,4 +6,5 @@ class EndPoint {
   static const String searchByName="$product?searchTerm=";
   static const String reasonsLookup="lookup/contribution-reasons";
   static const String vote="contribute";
+  static const String sendOtp="auth/send";
 }

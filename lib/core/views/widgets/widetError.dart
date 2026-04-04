@@ -19,7 +19,7 @@ final String text2;
           child:widet ,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(72),
-          color: AppColors.circularShape
+          color: AppColors.semiLightGrey
           ),
         ),
         SizedBox(height:20 ,),

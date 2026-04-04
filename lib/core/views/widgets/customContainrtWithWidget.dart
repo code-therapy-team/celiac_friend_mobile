@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomContainer extends StatelessWidget {
   const CustomContainer({super.key,required this.colorContainer,required this.colorBorder,required this.widget
-,required this.radius,required this.paddinHorizental,required this.paddingVertical
+,required this.radius, this.paddinHorizental=0, this.paddingVertical=0
   });
 final Color colorContainer ;
 final Color colorBorder;

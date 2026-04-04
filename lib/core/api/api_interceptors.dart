@@ -11,11 +11,19 @@ class ApiInterceptor extends Interceptor {
 
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    final token = TokenStorage.getAccessToken() ?? 'null';
+// 1. Get the token without the fallback text
+    final token = TokenStorage.getAccessToken();
 
-    options.headers.addAll({
-      'Authorization': 'Bearer $token',
-    });
+    // 2. Only add the header if the token actually exists and isn't empty
+    if (token != null && token.isNotEmpty) {
+      options.headers['Authorization'] = 'Bearer $token';
+    }
+    // final token = TokenStorage.getAccessToken() ?? 'null';
+
+    // options.headers.addAll({
+    //   if(token != 'null')
+    //   'Authorization': 'Bearer $token',
+    // });
     
     super.onRequest(options, handler);
   }
