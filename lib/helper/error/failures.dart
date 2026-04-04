@@ -1,4 +1,4 @@
-import 'package:celus_fe/helper/error/exceptions.dart';
+import 'package:celiac_mobile/helper/error/exceptions.dart';
 import 'package:dio/dio.dart';
 
 abstract class Failure {

@@ -1,5 +1,5 @@
-import 'package:celus_fe/core/constants/app_colors.dart';
-import 'package:celus_fe/core/views/widgets/bigStack.dart';
+import 'package:celiac_mobile/core/constants/app_colors.dart';
+import 'package:celiac_mobile/core/views/widgets/bigStack.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../constants/text_styles.dart';
@@ -13,6 +13,7 @@ class AddProductScreen extends StatelessWidget {
   final TextEditingController nameProductCt = TextEditingController();
   final TextEditingController brandProductCt = TextEditingController();
   final TextEditingController countryProductCt = TextEditingController();
+  @override
   Widget build(BuildContext context) {
    
     return Scaffold(
@@ -24,7 +25,7 @@ class AddProductScreen extends StatelessWidget {
            Text('إضافة منتج', style:AppTextStyle.mainWord ,),
             SizedBox(height:30),
         Center(
-          child: Container(
+          child: SizedBox(
                  height:120,
                  width: 100,
                 child:ClipRRect(

@@ -1,5 +1,5 @@
-import 'package:celus_fe/core/models/product.dart';
-import 'package:celus_fe/core/views/screens/scanBarcodeOne.dart';
+import 'package:celiac_mobile/core/models/product.dart';
+import 'package:celiac_mobile/core/views/screens/scanBarcodeOne.dart';
 import 'package:flutter/material.dart';
 import '../core/models/productUploader.dart';
 import '../core/views/screens/addProductScreen.dart';
@@ -25,5 +25,6 @@ class RouteManager {
         return MaterialPageRoute(builder: (ctx) => AddProductImageBuilder(productUploader:productUploader,),settings:settings);
      
     }
+    return null;
   }
 }

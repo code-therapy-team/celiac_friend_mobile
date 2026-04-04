@@ -1,6 +1,6 @@
-import 'package:celus_fe/core/api/api_consumer.dart';
-import 'package:celus_fe/core/api/end_ponits.dart';
-import 'package:celus_fe/core/models/productState.dart';
+import 'package:celiac_mobile/core/api/api_consumer.dart';
+import 'package:celiac_mobile/core/api/end_ponits.dart';
+import 'package:celiac_mobile/core/models/productState.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart'as foundation;
 import 'package:flutter/material.dart';
@@ -20,11 +20,11 @@ class ProductByBarcodeVM {
 
       ProductState productState = ProductState.fromJson(response);
       if (foundation.kDebugMode) {
-        print(productState.imageURL??''+'====================================');
+        print(productState.imageURL??'====================================');
       }
       return Right(productState);
     } catch (e) {
-      print(e.toString()+'====================================');
+      print('$e====================================');
       print(ServerFailure.handleException(e).errorMessage);
       return Left(ServerFailure.handleException(e));
     }
@@ -93,8 +93,8 @@ class ProductByBarcodeVM {
     }
   }
 }
-// import 'package:celus_fe/core/constants/api_urls.dart';
-// import 'package:celus_fe/core/models/productState.dart';
+// import 'package:celiac_mobile/core/constants/api_urls.dart';
+// import 'package:celiac_mobile/core/models/productState.dart';
 // import 'package:dio/dio.dart';
 // import 'package:flutter/material.dart';
 // import '../../helper/apiException.dart';

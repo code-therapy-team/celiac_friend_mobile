@@ -1,4 +1,4 @@
-import 'package:celus_fe/core/services/get_it.dart';
+import 'package:celiac_mobile/core/services/get_it.dart';
 import 'package:flutter/material.dart';
 
 import 'shared_pref.dart';

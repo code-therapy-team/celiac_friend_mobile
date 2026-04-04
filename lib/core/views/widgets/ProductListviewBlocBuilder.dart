@@ -1,6 +1,6 @@
-import 'package:celus_fe/core/views/widgets/productListViewBuilder.dart';
-import 'package:celus_fe/helper/cubits/get_product_cubit/get_product_cubit.dart';
-import 'package:celus_fe/helper/cubits/get_product_cubit/get_product_state.dart';
+import 'package:celiac_mobile/core/views/widgets/productListViewBuilder.dart';
+import 'package:celiac_mobile/helper/cubits/get_product_cubit/get_product_cubit.dart';
+import 'package:celiac_mobile/helper/cubits/get_product_cubit/get_product_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

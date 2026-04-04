@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:celus_fe/core/views/widgets/customContainrtWithWidget.dart';
+import 'package:celiac_mobile/core/views/widgets/customContainrtWithWidget.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

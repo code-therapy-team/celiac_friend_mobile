@@ -1,4 +1,4 @@
-import 'package:celus_fe/helper/cubits/get_product_cubit/get_product_state.dart';
+import 'package:celiac_mobile/helper/cubits/get_product_cubit/get_product_state.dart';
 
 class SearchByBarcodeStates{}
 class InitialSearchBarState extends SearchByBarcodeStates{}

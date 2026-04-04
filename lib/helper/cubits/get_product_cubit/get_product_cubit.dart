@@ -1,8 +1,8 @@
-import 'package:celus_fe/core/api/dio_consumer.dart';
-import 'package:celus_fe/core/models/product.dart';
-import 'package:celus_fe/core/services/get_it.dart';
-import 'package:celus_fe/core/view_model/productsVM.dart';
-import 'package:celus_fe/helper/cubits/get_product_cubit/get_product_state.dart';
+import 'package:celiac_mobile/core/api/dio_consumer.dart';
+import 'package:celiac_mobile/core/models/product.dart';
+import 'package:celiac_mobile/core/services/get_it.dart';
+import 'package:celiac_mobile/core/view_model/productsVM.dart';
+import 'package:celiac_mobile/helper/cubits/get_product_cubit/get_product_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductCubit extends Cubit<ProductState> {

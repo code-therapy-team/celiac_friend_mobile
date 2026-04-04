@@ -1,14 +1,10 @@
-<<<<<<< Updated upstream
-import 'package:celus_fe/core/constants/app_colors.dart';
-=======
 
->>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 
 
 
 class ContainerIcon extends StatelessWidget {
-   ContainerIcon({super.key,required this.imagePath,required this.backgroundIcon,this.value,required this.containerH,
+   const ContainerIcon({super.key,required this.imagePath,required this.backgroundIcon,this.value,required this.containerH,
   required this.containerW,required this.imageH,required this.imageW
   });
  final String imagePath;

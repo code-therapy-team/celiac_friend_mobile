@@ -1,5 +1,5 @@
-import 'package:celus_fe/core/views/widgets/bigStack.dart';
-import 'package:celus_fe/core/views/widgets/customOnBoarding.dart';
+import 'package:celiac_mobile/core/views/widgets/bigStack.dart';
+import 'package:celiac_mobile/core/views/widgets/customOnBoarding.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/OnBoarding.dart';

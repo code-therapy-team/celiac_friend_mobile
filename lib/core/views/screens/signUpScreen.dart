@@ -1,16 +1,10 @@
-<<<<<<< Updated upstream
-import 'package:celus_fe/core/views/widgets/containerSignIn.dart';
-import 'package:celus_fe/core/views/widgets/password_section.dart';
-import 'package:celus_fe/core/views/widgets/user_section.dart';
-=======
+
 import 'package:celiac_mobile/core/views/screens/otpScreen.dart';
 import 'package:celiac_mobile/core/views/widgets/containerSignIn.dart';
 import 'package:celiac_mobile/core/views/widgets/loadingSingin.dart';
 import 'package:celiac_mobile/core/views/widgets/signinNameWidget.dart';
 import 'package:celiac_mobile/core/views/widgets/signin_widget.dart';
 import 'package:celiac_mobile/helper/cubits/otp_cubit/otp_cubit_cubit.dart';
-
->>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

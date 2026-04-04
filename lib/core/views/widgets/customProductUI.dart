@@ -1,4 +1,4 @@
-import 'package:celus_fe/core/constants/app_colors.dart';
+import 'package:celiac_mobile/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import '../../constants/text_styles.dart';
 import '../../models/product.dart';
@@ -23,7 +23,7 @@ class _CustomProductUIState extends State<CustomProductUI> {
         Container(
           child: Row(children: [
            Expanded(
-             child: Container(
+             child: SizedBox(
                height:104,
               child:GestureDetector(
                 child: ClipRRect(

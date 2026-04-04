@@ -1,4 +1,4 @@
-import 'package:celus_fe/core/constants/app_colors.dart';
+import 'package:celiac_mobile/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavigationBar extends StatelessWidget {
@@ -15,35 +15,35 @@ class CustomNavigationBar extends StatelessWidget {
       ) ,
       child: Row(mainAxisAlignment:MainAxisAlignment.spaceAround ,
         children: [
-         Container(
+         SizedBox(
                height:32,
                width:32 ,
                child:ClipRRect(
                 child:Image.asset('assets/images/Female Profile.png',fit:BoxFit.fill ,),  
               ) ,
              ),
-              Container(
+              SizedBox(
                height:32,
                width:32 ,
                child:ClipRRect(
                 child:Image.asset('assets/images/CookingBook.png',fit:BoxFit.fill ,),  
               ) ,
              ),
-        Container(
+        SizedBox(
                height:32,
                width:32 ,
                child:ClipRRect(
                 child:Image.asset('assets/images/Barcode.png',fit:BoxFit.fill ,),  
               ) ,
              ),
-              Container(
+              SizedBox(
                height:32,
                width:32 ,
                child:ClipRRect(
                 child:Image.asset('assets/images/Restaurant.png',fit:BoxFit.fill ,),  
               ) ,
              ),
-               Container(
+               SizedBox(
                height:32,
                width:32 ,
                child:ClipRRect(

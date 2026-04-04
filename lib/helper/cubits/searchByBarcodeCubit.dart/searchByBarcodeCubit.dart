@@ -1,6 +1,6 @@
 // import 'package:bloc/bloc.dart';
-// import 'package:celus_fe/helper/cubits/get_product_cubit/get_product_state.dart';
-// import 'package:celus_fe/helper/cubits/searchByBarcodeCubit.dart/searchByBarcodeStates.dart';
+// import 'package:celiac_mobile/helper/cubits/get_product_cubit/get_product_state.dart';
+// import 'package:celiac_mobile/helper/cubits/searchByBarcodeCubit.dart/searchByBarcodeStates.dart';
 // import 'package:dio/dio.dart';
 
 // import '../../../core/view_model/ProductByBarcodeVM.dart';

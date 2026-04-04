@@ -1,20 +1,33 @@
 
-import 'package:celus_fe/core/api/dio_consumer.dart';
-import 'package:celus_fe/core/constants/app_colors.dart';
-import 'package:celus_fe/core/constants/text_styles.dart';
-import 'package:celus_fe/core/models/product.dart';
-import 'package:celus_fe/core/models/productState.dart';
-import 'package:celus_fe/core/services/get_it.dart';
-import 'package:celus_fe/core/view_model/productByBarcodeVM.dart';
-import 'package:celus_fe/core/views/widgets/bigStack.dart';
-import 'package:celus_fe/core/views/widgets/customContainerDialog.dart';
-import 'package:celus_fe/helper/error/failures.dart';
+// import 'package:celiac_mobile/core/api/dio_consumer.dart';
+// import 'package:celiac_mobile/core/constants/app_colors.dart';
+// import 'package:celiac_mobile/core/constants/text_styles.dart';
+// import 'package:celiac_mobile/core/models/product.dart';
+// import 'package:celiac_mobile/core/models/productState.dart';
+// import 'package:celiac_mobile/core/services/get_it.dart';
+// import 'package:celiac_mobile/core/view_model/productByBarcodeVM.dart';
+// import 'package:celiac_mobile/core/views/widgets/bigStack.dart';
+// import 'package:celiac_mobile/core/views/widgets/customContainerDialog.dart';
+// import 'package:celiac_mobile/helper/error/failures.dart';
+// import 'package:dartz/dartz.dart' as dartz;
+// import 'package:flutter/material.dart';
+
+import 'package:celiac_mobile/core/api/dio_consumer.dart';
+import 'package:celiac_mobile/core/constants/app_colors.dart';
+import 'package:celiac_mobile/core/constants/text_styles.dart';
+import 'package:celiac_mobile/core/models/product.dart';
+import 'package:celiac_mobile/core/models/productState.dart';
+import 'package:celiac_mobile/core/services/get_it.dart';
+import 'package:celiac_mobile/core/view_model/productByBarcodeVM.dart';
+import 'package:celiac_mobile/core/views/widgets/bigStack.dart';
+import 'package:celiac_mobile/core/views/widgets/customContainerDialog.dart';
+import 'package:celiac_mobile/helper/error/failures.dart';
 import 'package:dartz/dartz.dart' as dartz;
 import 'package:flutter/material.dart';
 
 class ProductInfo extends StatefulWidget {
-  ProductInfo({super.key, required this.product});
-  late Product product;
+  const ProductInfo({super.key, required this.product});
+  final Product product;
 
   @override
   State<ProductInfo> createState() => _ProductInfoState();
@@ -62,7 +75,7 @@ class _ProductInfoState extends State<ProductInfo> {
                     ),
                   ),
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                       height: 102,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(16),
@@ -179,10 +192,10 @@ class _ProductInfoState extends State<ProductInfo> {
 }
 
 
-// import 'package:celus_fe/core/api/dio_consumer.dart';
-// import 'package:celus_fe/core/constants/text_styles.dart';
-// import 'package:celus_fe/core/models/product.dart';
-// import 'package:celus_fe/core/services/get_it.dart';
+// import 'package:celiac_mobile/core/api/dio_consumer.dart';
+// import 'package:celiac_mobile/core/constants/text_styles.dart';
+// import 'package:celiac_mobile/core/models/product.dart';
+// import 'package:celiac_mobile/core/services/get_it.dart';
 // import 'package:dio/dio.dart';
 // import 'package:flutter/material.dart';
 // import '../../constants/app_colors.dart';
@@ -295,8 +308,8 @@ class _ProductInfoState extends State<ProductInfo> {
 //     );
 //   }
 // }
-// import 'package:celus_fe/core/constants/text_styles.dart';
-// import 'package:celus_fe/core/models/product.dart';
+// import 'package:celiac_mobile/core/constants/text_styles.dart';
+// import 'package:celiac_mobile/core/models/product.dart';
 // import 'package:dio/dio.dart';
 // import 'package:flutter/material.dart';
 // import '../../constants/app_colors.dart';

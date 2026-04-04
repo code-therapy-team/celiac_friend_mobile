@@ -1,4 +1,4 @@
-import 'package:celus_fe/core/api/dio_consumer.dart';
+import 'package:celiac_mobile/core/api/dio_consumer.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
