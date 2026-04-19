@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:celiac_mobile/core/api/dio_consumer.dart';
-import 'package:celiac_mobile/core/services/get_it.dart';
-import 'package:celiac_mobile/core/view_model/send_otp_vm.dart';
+import 'package:celus_fe/core/api/dio_consumer.dart';
+import 'package:celus_fe/core/services/get_it.dart';
+import 'package:celus_fe/core/view_model/send_otp_vm.dart';
 import 'package:meta/meta.dart';
 
 part 'otp_cubit_state.dart';

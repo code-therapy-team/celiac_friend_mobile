@@ -1,7 +1,7 @@
-import 'package:celiac_mobile/core/constants/app_colors.dart';
-import 'package:celiac_mobile/core/constants/text_styles.dart';
-import 'package:celiac_mobile/core/views/widgets/customContainerDialog.dart';
-import 'package:celiac_mobile/core/views/widgets/searchBox.dart';
+import 'package:celus_fe/core/constants/app_colors.dart';
+import 'package:celus_fe/core/constants/text_styles.dart';
+import 'package:celus_fe/core/views/widgets/customContainerDialog.dart';
+import 'package:celus_fe/core/views/widgets/searchBox.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

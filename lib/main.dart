@@ -1,11 +1,5 @@
-<<<<<<< Updated upstream
 import 'package:celus_fe/core/services/init_services.dart';
 import 'package:celus_fe/core/views/screens/signUpScreen.dart';
-=======
-import 'package:celiac_mobile/core/services/init_services.dart';
-import 'package:celiac_mobile/core/views/screens/otpScreen.dart';
-import 'package:celiac_mobile/core/views/screens/signUpScreen.dart';
->>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'helper/appRoute.dart';
@@ -30,14 +24,9 @@ class MyApp extends StatelessWidget {
           Locale('ar'),
         ],
         debugShowCheckedModeBanner: false,
-<<<<<<< Updated upstream
-    //home:SignUpScreen(),
-      initialRoute: '/allProductionScreen',
-=======
        // home:OtpScreen(),
         home:SignUpScreen(),
      // initialRoute: '/allProductionScreen',
->>>>>>> Stashed changes
       onGenerateRoute: RouteManager.generateRoute,
     );
   }

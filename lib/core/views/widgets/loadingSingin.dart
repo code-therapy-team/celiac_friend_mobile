@@ -1,5 +1,5 @@
-import 'package:celiac_mobile/core/constants/text_styles.dart';
-import 'package:celiac_mobile/helper/utils/svgLoadingSpinner.dart';
+import 'package:celus_fe/core/constants/text_styles.dart';
+import 'package:celus_fe/helper/utils/svgLoadingSpinner.dart';
 import 'package:flutter/material.dart';
 
 class LoadingSigninWidget extends StatelessWidget {

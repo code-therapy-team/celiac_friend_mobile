@@ -1,11 +1,11 @@
 
-import 'package:celiac_mobile/core/constants/app_colors.dart';
-import 'package:celiac_mobile/core/constants/text_styles.dart';
-import 'package:celiac_mobile/core/views/widgets/country_code.dart';
-import 'package:celiac_mobile/core/views/widgets/customContainerDialog.dart';
-import 'package:celiac_mobile/core/views/widgets/customContainrtWithWidget.dart';
-import 'package:celiac_mobile/core/views/widgets/searchBox.dart';
-import 'package:celiac_mobile/helper/cubits/otp_cubit/otp_cubit_cubit.dart';
+import 'package:celus_fe/core/constants/app_colors.dart';
+import 'package:celus_fe/core/constants/text_styles.dart';
+import 'package:celus_fe/core/views/widgets/country_code.dart';
+import 'package:celus_fe/core/views/widgets/customContainerDialog.dart';
+import 'package:celus_fe/core/views/widgets/customContainrtWithWidget.dart';
+import 'package:celus_fe/core/views/widgets/searchBox.dart';
+import 'package:celus_fe/helper/cubits/otp_cubit/otp_cubit_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

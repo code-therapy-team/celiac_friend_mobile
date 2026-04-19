@@ -1,7 +1,7 @@
-import 'package:celiac_mobile/core/api/api_consumer.dart';
-import 'package:celiac_mobile/core/api/end_ponits.dart';
-import 'package:celiac_mobile/core/models/send_otp_model.dart';
-import 'package:celiac_mobile/helper/error/failures.dart';
+import 'package:celus_fe/core/api/api_consumer.dart';
+import 'package:celus_fe/core/api/end_ponits.dart';
+import 'package:celus_fe/core/models/send_otp_model.dart';
+import 'package:celus_fe/helper/error/failures.dart';
 import 'package:dartz/dartz.dart';
 
 class SendOtpVm {

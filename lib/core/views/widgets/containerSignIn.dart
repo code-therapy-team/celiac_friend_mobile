@@ -1,10 +1,4 @@
-<<<<<<< Updated upstream
-import 'package:celus_fe/core/views/screens/signUpScreen.dart';
 import 'package:celus_fe/core/views/widgets/customContainrtWithWidget.dart';
-=======
-
-import 'package:celiac_mobile/core/views/widgets/customContainrtWithWidget.dart';
->>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 
 

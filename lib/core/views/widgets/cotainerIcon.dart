@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-import 'package:celus_fe/core/constants/app_colors.dart';
-=======
-
->>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 
 
